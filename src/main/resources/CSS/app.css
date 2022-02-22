@@ -1,0 +1,8 @@
+#appDetalle .label{
+    -fx-text-fill: white;
+}
+
+#appPrincipal .label{
+    -fx-text-fill: white;
+    -fx-font-size: 20px;
+}

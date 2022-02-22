@@ -17,25 +17,24 @@ public class AppTablaController {
     private TableView vistaTabla;
 
     @FXML
-    private TableColumn<Animal,String> columnName, columnSpecie;
+    private TableColumn<Animal, String> columnName, columnClas;
 
     @FXML
-    private void volverPrincipalT(){
+    private void volverPrincipalT() {
         appTabla.setVisible(false);
     }
 
-    public void cargarTabla(ObservableList<Animal> datosLista){
+    public void cargarTabla(ObservableList<Animal> datosLista) {
         vistaTabla.setEditable(true);
         columnName.setCellValueFactory(new PropertyValueFactory<>("nombre"));
-        columnSpecie.setCellValueFactory(new PropertyValueFactory<>("especie"));
-        columnSpecie.setCellFactory(TextFieldTableCell.forTableColumn());
-        columnSpecie.setOnEditCommit(data ->{
-            if (data !=null){
-                data.getRowValue().setEspecie(data.getNewValue());
+        columnClas.setCellValueFactory(new PropertyValueFactory<>("clasificacion"));
+        columnClas.setCellFactory(TextFieldTableCell.forTableColumn());
+        columnClas.setOnEditCommit(data -> {
+            if (data != null) {
+                data.getRowValue().setClasificacion(data.getNewValue());
             }
         });
         vistaTabla.setItems(datosLista);
-
 
 
     }

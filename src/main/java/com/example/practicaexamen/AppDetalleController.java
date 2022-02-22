@@ -1,9 +1,7 @@
 package com.example.practicaexamen;
 
-import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
-import javafx.scene.control.SelectionMode;
 import javafx.scene.layout.StackPane;
 
 public class AppDetalleController {
@@ -12,17 +10,17 @@ public class AppDetalleController {
     private StackPane appDetalle;
 
     @FXML
-    private Label lblNombre, lblEspecie;
+    private Label lblNombre, lblClasificacion;
 
-    public void cargarAnimal(Animal animal){
+    public void cargarAnimal(Animal animal) {
 
         lblNombre.setText(animal.getNombre());
-        lblEspecie.setText(animal.getEspecie());
+        lblClasificacion.setText(animal.getClasificacion());
 
     }
 
     @FXML
-    private void volverADetalle(){
+    private void volverADetalle() {
         appDetalle.setVisible(false);
     }
 

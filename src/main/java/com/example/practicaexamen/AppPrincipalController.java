@@ -1,15 +1,24 @@
 package com.example.practicaexamen;
 
+import javafx.animation.TranslateTransition;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.layout.HBox;
 import javafx.scene.layout.StackPane;
+import javafx.util.Duration;
 
 import java.net.URL;
 import java.util.ResourceBundle;
 
 public class AppPrincipalController implements Initializable {
+
+    private boolean desplegado;
+    private TranslateTransition animation;
+    @FXML
+    private HBox hBoxSaludo;
+
 
     @FXML
     private StackPane appLista, appTabla, appGrafCircular, appGrafLineas;
@@ -28,6 +37,9 @@ public class AppPrincipalController implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
+
+        hBoxSaludo.setTranslateY(100);
+
         appLista.setVisible(false);
         appTabla.setVisible(false);
         appGrafCircular.setVisible(false);
@@ -35,39 +47,55 @@ public class AppPrincipalController implements Initializable {
 
         cargarLista();
 
+    }
 
+    @FXML
+    private void iniciaSaludo() {
+        animation = new TranslateTransition(Duration.millis(300), hBoxSaludo);
+
+        if (!desplegado) {
+            animation.setFromY(hBoxSaludo.getWidth());
+            animation.setToY(0);
+            desplegado = true;
+        } else {
+            animation.setFromY(0);
+            animation.setToY(hBoxSaludo.getWidth());
+            desplegado = false;
+        }
+        animation.play();
     }
 
 
-    public void cargarVistaLista(){
+    public void cargarVistaLista() {
         appLista.setVisible(true);
         appListaController.cargarVistaLista(datosLista);
     }
 
-    public void cargarVistaTabla(){
+    public void cargarVistaTabla() {
         appTabla.setVisible(true);
         appTablaController.cargarTabla(datosLista);
     }
 
-    public void cargarVistaGrafCircular(){
+    public void cargarVistaGrafCircular() {
         appGrafCircular.setVisible(true);
         appGrafCircularController.cargarDatosPieChart(datosLista);
     }
 
-    public void cargarVistaGrafLineas(){
+    public void cargarVistaGrafLineas() {
         appGrafLineas.setVisible(true);
         //appGrafLineasController.iniciarGrafica(datosLista);
     }
 
-    private void cargarLista(){
+    private void cargarLista() {
 
         datosLista = FXCollections.observableArrayList(
-                new Animal("Lobo", 12, "Mamifero", 0.7),
-                new Animal("Tiburon", 5,"Pez", 0.9),
-                new Animal("Aguila", 2, "Ave", 0.8),
-                new Animal("Labrador", 5, "Mamifero", 0.1),
-                new Animal("Pastor aleman", 7, "Mamifero", 0.6),
-                new Animal("Cobra", 2, "Reptil", 0.4));
+                new Animal("Lobo", 10, "Vertebrado"),
+                new Animal("Tiburon", 5, "Vertebrado"),
+                new Animal("Aguila", 2, "Vertebrado"),
+                new Animal("Labrador", 5, "Vertebrado"),
+                new Animal("Cobra", 1, "Vertebrado"),
+                new Animal("Lombriz", 1, "Invertebrado"),
+                new Animal("Medusa", 1, "Invertebrado"));
 
     }
 

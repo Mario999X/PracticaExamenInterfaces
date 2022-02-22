@@ -15,25 +15,34 @@ public class AppGrafCircularController {
     private PieChart grafCircular;
 
     @FXML
-    private void volverPrincipalGrafC(){
+    private void volverPrincipalGrafC() {
         appGrafCircular.setVisible(false);
     }
 
-    public void cargarDatosPieChart(ObservableList<Animal> listaDatos){
-        int contadorMamiferos = 0;
-        for (Animal a1 : listaDatos){
-            if (a1.getEspecie().equals("Mamifero")){
-                contadorMamiferos++;
+    public void cargarDatosPieChart(ObservableList<Animal> listaDatos) {
+        int contadorVertebrados = 0;
+        for (Animal a1 : listaDatos) {
+            if (a1.getClasificacion().equals("Vertebrado")) {
+                contadorVertebrados++;
+            }
+        }
+
+        int contadorInvertebrados = 0;
+        for (Animal a2 : listaDatos) {
+            if (a2.getClasificacion().equals("Invertebrado")) {
+                contadorInvertebrados++;
             }
         }
 
 
-        int contadorTotal = listaDatos.size() - contadorMamiferos;
+        int contadorTotal = listaDatos.size() - contadorVertebrados - contadorInvertebrados;
 
         ObservableList<PieChart.Data> datosGrafica = FXCollections.observableArrayList(
-                new PieChart.Data("Mamiferos", contadorMamiferos),
+                new PieChart.Data("Vertebrados", contadorVertebrados),
+                new PieChart.Data("Invertebrados", contadorInvertebrados),
                 new PieChart.Data("Otros", contadorTotal));
         grafCircular.setData(datosGrafica);
+        grafCircular.setTitle("Clasificacion animal");
         grafCircular.setClockwise(false);
     }
 }

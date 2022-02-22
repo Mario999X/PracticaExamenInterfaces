@@ -3,8 +3,13 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<StackPane fx:id="appPrincipal" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.practicaexamen.AppPrincipalController">
+<StackPane fx:id="appPrincipal" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" stylesheets="@../../../CSS/app.css" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.practicaexamen.AppPrincipalController">
    <children>
+      <HBox fx:id="hBoxSaludo" alignment="CENTER" maxHeight="-Infinity" maxWidth="1.7976931348623157E308" prefHeight="100.0" prefWidth="200.0" style="-fx-background-color: Black;" StackPane.alignment="BOTTOM_CENTER">
+         <children>
+            <Label text="¡Buenos dias!" />
+         </children>
+      </HBox>
       <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
          <children>
             <Button fx:id="btnLista" alignment="TOP_LEFT" mnemonicParsing="false" onAction="#cargarVistaLista" text="Lista" />
@@ -13,9 +18,10 @@
             <Button fx:id="btnGrafLineas" mnemonicParsing="false" onAction="#cargarVistaGrafLineas" text="GraficoLineas" />
          </children>
       </VBox>
-      <fx:include fx:id="appLista" source="appLista.fxml" />
-      <fx:include fx:id="appTabla" source="appTabla.fxml" />
-      <fx:include fx:id="appGrafCircular" source="appGrafCircular.fxml" />
-      <fx:include fx:id="appGrafLineas" source="appGrafLineas.fxml" />
+      <Button fx:id="btnSaludo" mnemonicParsing="false" onAction="#iniciaSaludo" text="Saludo" StackPane.alignment="TOP_RIGHT" />
+      <fx:include fx:id="appLista" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" source="appLista.fxml" />
+      <fx:include fx:id="appTabla" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" source="appTabla.fxml" />
+      <fx:include fx:id="appGrafCircular" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" source="appGrafCircular.fxml" />
+      <fx:include fx:id="appGrafLineas" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" source="appGrafLineas.fxml" />
    </children>
 </StackPane>

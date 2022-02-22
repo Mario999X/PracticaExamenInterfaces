@@ -4,8 +4,7 @@ public class Animal {
 
     private String nombre;
     private int edad;
-    private String especie;
-    private double porcentaje;
+    private String clasificacion;
 
 
     @Override
@@ -13,11 +12,10 @@ public class Animal {
         return nombre;
     }
 
-    public Animal(String nombre, int edad, String especie, double porcentaje) {
+    public Animal(String nombre, int edad, String clasificacion) {
         this.nombre = nombre;
         this.edad = edad;
-        this.especie = especie;
-        this.porcentaje = porcentaje;
+        this.clasificacion = clasificacion;
     }
 
     public String getNombre() {
@@ -28,15 +26,11 @@ public class Animal {
         return edad;
     }
 
-    public String getEspecie() {
-        return especie;
+    public String getClasificacion() {
+        return clasificacion;
     }
 
-    public double getPorcentaje() {
-        return porcentaje;
-    }
-
-    public void setEspecie(String especie) {
-        this.especie = especie;
+    public void setClasificacion(String clasificacion) {
+        this.clasificacion = clasificacion;
     }
 }

@@ -8,7 +8,7 @@
       <VBox alignment="CENTER" maxWidth="-Infinity" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: gray;">
          <children>
             <Label fx:id="lblNombre" alignment="CENTER" maxWidth="1.7976931348623157E308" text="Nombre" />
-            <Label fx:id="lblEspecie" alignment="CENTER" maxWidth="1.7976931348623157E308" text="Especie" />
+            <Label fx:id="lblClasificacion" alignment="CENTER" maxWidth="1.7976931348623157E308" text="Clasificacion" />
          </children>
       </VBox>
       <Button fx:id="btnAtrasDetalle" mnemonicParsing="false" onAction="#volverADetalle" text="Atras" StackPane.alignment="TOP_LEFT" />
