@@ -11,16 +11,17 @@ La lista esta introducida en código directamente
 
 ## La app ofrece lo siguiente:
 
-    1. Vista Principal: 5 botones.
+    1. Vista Principal: 6 botones.
         2. Btn "Saludo": Animacion básica en la vista Principal.
-        3. Btn "Lista": Vista de una lista.
-            4. Vista Detalle al pulsar sobre un elemento de la lista.
-        5. Btn "Tabla": Vista de una tabla.
-            6. Campo "Clasificación" modificable con doble click. 
-        7. Btn "Gráfica Circular": Un Pie Chart funcional
+        3. Btn "Salir": Alternativa para cerrar la app.
+        4. Btn "Lista": Vista de una lista.
+            5. Vista Detalle al pulsar sobre un elemento de la lista.
+        6. Btn "Tabla": Vista de una tabla.
+            7. Campo "Clasificación" modificable con doble click. 
+        8. Btn "Gráfica Circular": Un Pie Chart funcional
         con posible modificación desde la tabla.
-        8. Btn "Gráfico Líneas": Un Line Chart no funcional. Datos
+        9. Btn "Gráfico Líneas": Un Line Chart no funcional. Datos
         introducidos en código.
-    9. Internacionalización Español-Inglés.(Cambiable en código).
-    10. Aplicación de un CSS simple.
+    10. Internacionalización Español-Inglés.(Cambiable en código).
+    11. Aplicación de un CSS simple.
 
