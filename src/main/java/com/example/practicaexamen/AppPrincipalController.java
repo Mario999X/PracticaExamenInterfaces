@@ -53,12 +53,12 @@ public class AppPrincipalController implements Initializable {
         animation = new TranslateTransition(Duration.millis(300), hBoxSaludo);
 
         if (!desplegado) {
-            animation.setFromY(hBoxSaludo.getWidth());
+            animation.setFromY(hBoxSaludo.getHeight());
             animation.setToY(0);
             desplegado = true;
         } else {
             animation.setFromY(0);
-            animation.setToY(hBoxSaludo.getWidth());
+            animation.setToY(hBoxSaludo.getHeight());
             desplegado = false;
         }
         animation.play();
