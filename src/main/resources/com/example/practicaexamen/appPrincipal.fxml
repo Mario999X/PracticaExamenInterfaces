@@ -16,6 +16,6 @@
       <fx:include fx:id="appLista" source="appLista.fxml" />
       <fx:include fx:id="appTabla" source="appTabla.fxml" />
       <fx:include fx:id="appGrafCircular" source="appGrafCircular.fxml" />
-      <fx:include fx:id="appGrafBarras" source="appGrafBarras.fxml" />
+      <fx:include fx:id="appGrafBarras" source="appGrafLineas.fxml" />
    </children>
 </StackPane>

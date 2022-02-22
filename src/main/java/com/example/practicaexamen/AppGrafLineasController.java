@@ -3,13 +3,13 @@ package com.example.practicaexamen;
 import javafx.fxml.FXML;
 import javafx.scene.layout.StackPane;
 
-public class AppGrafBarrasController {
+public class AppGrafLineasController {
 
     @FXML
-    private StackPane appGrafBarras;
+    private StackPane appGrafLineas;
 
     @FXML
     private void volverPrincipalGB(){
-        appGrafBarras.setVisible(false);
+        appGrafLineas.setVisible(false);
     }
 }

@@ -21,7 +21,7 @@ public class AppPrincipalController implements Initializable {
     @FXML
     private AppGrafCircularController appGrafCircularController;
     @FXML
-    private AppGrafBarrasController appGrafBarrasController;
+    private AppGrafLineasController appGrafLineasController;
 
     private ObservableList<Animal> datosLista;
 
@@ -45,10 +45,12 @@ public class AppPrincipalController implements Initializable {
 
     public void cargarVistaTabla(){
         appTabla.setVisible(true);
+        appTablaController.cargarTabla(datosLista);
     }
 
     public void cargarVistaGrafCircular(){
         appGrafCircular.setVisible(true);
+        appGrafCircularController.cargarDatosPieChart(datosLista);
     }
 
     public void cargarVistaGrafBarras(){
@@ -58,8 +60,11 @@ public class AppPrincipalController implements Initializable {
     private void cargarLista(){
 
         datosLista = FXCollections.observableArrayList();
-        datosLista.addAll(new Animal("Lobo", 12, "Mamifero"), new Animal("Tiburon",
-                5,"Pez"));
+        datosLista.addAll(new Animal("Lobo", 12, "Mamifero"),
+                new Animal("Tiburon", 5,"Pez"),
+                new Animal("Aguila", 2, "Ave"),
+                new Animal("Labrador", 5, "Mamifero"),
+                new Animal("Pastor aleman", 7, "Mamifero"));
 
     }
 

@@ -7,8 +7,8 @@
    <children>
       <TableView fx:id="vistaTabla" maxWidth="-Infinity" prefHeight="200.0" prefWidth="400.0">
         <columns>
-          <TableColumn prefWidth="191.0" text="Nombre" />
-          <TableColumn prefWidth="208.0" text="Especie" />
+          <TableColumn fx:id="columnName" prefWidth="191.0" text="Nombre" />
+          <TableColumn fx:id="columnSpecie" prefWidth="208.0" text="Especie" />
         </columns>
       </TableView>
       <Button fx:id="btnAtrasT" mnemonicParsing="false" onAction="#volverPrincipalT" text="Atras" StackPane.alignment="TOP_LEFT" />
