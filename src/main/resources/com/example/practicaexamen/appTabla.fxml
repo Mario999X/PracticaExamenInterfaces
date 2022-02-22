@@ -3,9 +3,9 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<StackPane fx:id="appTabla" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.practicaexamen.AppTablaController">
+<StackPane fx:id="appTabla" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.practicaexamen.AppTablaController">
    <children>
-      <TableView fx:id="vistaTabla" maxWidth="-Infinity" prefHeight="200.0" prefWidth="400.0">
+      <TableView fx:id="vistaTabla" editable="true" maxWidth="-Infinity" prefHeight="200.0" prefWidth="400.0">
         <columns>
           <TableColumn fx:id="columnName" prefWidth="191.0" text="Nombre" />
           <TableColumn fx:id="columnSpecie" prefWidth="208.0" text="Especie" />

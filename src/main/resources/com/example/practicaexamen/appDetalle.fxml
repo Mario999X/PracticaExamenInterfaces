@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<StackPane fx:id="appDetalle" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.practicaexamen.AppDetalleController">
+   <children>
+      <VBox alignment="CENTER" maxWidth="-Infinity" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: gray;">
+         <children>
+            <Label fx:id="lblNombre" alignment="CENTER" maxWidth="1.7976931348623157E308" text="Nombre" />
+            <Label fx:id="lblEspecie" alignment="CENTER" maxWidth="1.7976931348623157E308" text="Especie" />
+         </children>
+      </VBox>
+      <Button fx:id="btnAtrasDetalle" mnemonicParsing="false" onAction="#volverADetalle" text="Atras" StackPane.alignment="TOP_LEFT" />
+   </children>
+</StackPane>

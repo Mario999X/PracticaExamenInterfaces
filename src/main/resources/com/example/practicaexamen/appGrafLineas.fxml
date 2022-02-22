@@ -4,10 +4,10 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<StackPane fx:id="appGrafLineas" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.practicaexamen.AppGrafLineasController">
+<StackPane fx:id="appGrafLineas" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.practicaexamen.AppGrafLineasController">
    <children>
       <Button fx:id="btnAtrasGrafB" mnemonicParsing="false" onAction="#volverPrincipalGB" text="Atras" StackPane.alignment="TOP_LEFT" />
-      <LineChart fx:id="vistaGrafLineas" maxWidth="-Infinity" prefWidth="400.0">
+      <LineChart fx:id="grafLineas" maxWidth="-Infinity" prefWidth="400.0">
         <xAxis>
           <CategoryAxis side="BOTTOM" />
         </xAxis>

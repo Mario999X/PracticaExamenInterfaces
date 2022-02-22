@@ -3,9 +3,10 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<StackPane fx:id="appLista" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.practicaexamen.AppListaController">
+<StackPane fx:id="appLista" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.practicaexamen.AppListaController">
    <children>
       <ListView fx:id="vistaLista" maxWidth="-Infinity" prefHeight="200.0" prefWidth="250.0" />
       <Button fx:id="btnAtrasL" mnemonicParsing="false" onAction="#volverPrincipalL" text="Atras" StackPane.alignment="TOP_LEFT" />
+      <fx:include source="appDetalle.fxml" fx:id="appDetalle" />
    </children>
 </StackPane>

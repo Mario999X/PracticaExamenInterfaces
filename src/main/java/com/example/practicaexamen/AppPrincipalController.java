@@ -12,7 +12,7 @@ import java.util.ResourceBundle;
 public class AppPrincipalController implements Initializable {
 
     @FXML
-    private StackPane appLista, appTabla, appGrafCircular, appGrafBarras;
+    private StackPane appLista, appTabla, appGrafCircular, appGrafLineas;
 
     @FXML
     private AppListaController appListaController;
@@ -23,6 +23,7 @@ public class AppPrincipalController implements Initializable {
     @FXML
     private AppGrafLineasController appGrafLineasController;
 
+    @FXML
     private ObservableList<Animal> datosLista;
 
     @Override
@@ -30,7 +31,7 @@ public class AppPrincipalController implements Initializable {
         appLista.setVisible(false);
         appTabla.setVisible(false);
         appGrafCircular.setVisible(false);
-        appGrafBarras.setVisible(false);
+        appGrafLineas.setVisible(false);
 
         cargarLista();
 
@@ -53,18 +54,20 @@ public class AppPrincipalController implements Initializable {
         appGrafCircularController.cargarDatosPieChart(datosLista);
     }
 
-    public void cargarVistaGrafBarras(){
-        appGrafBarras.setVisible(true);
+    public void cargarVistaGrafLineas(){
+        appGrafLineas.setVisible(true);
+        //appGrafLineasController.iniciarGrafica(datosLista);
     }
 
     private void cargarLista(){
 
-        datosLista = FXCollections.observableArrayList();
-        datosLista.addAll(new Animal("Lobo", 12, "Mamifero"),
-                new Animal("Tiburon", 5,"Pez"),
-                new Animal("Aguila", 2, "Ave"),
-                new Animal("Labrador", 5, "Mamifero"),
-                new Animal("Pastor aleman", 7, "Mamifero"));
+        datosLista = FXCollections.observableArrayList(
+                new Animal("Lobo", 12, "Mamifero", 0.7),
+                new Animal("Tiburon", 5,"Pez", 0.9),
+                new Animal("Aguila", 2, "Ave", 0.8),
+                new Animal("Labrador", 5, "Mamifero", 0.1),
+                new Animal("Pastor aleman", 7, "Mamifero", 0.6),
+                new Animal("Cobra", 2, "Reptil", 0.4));
 
     }
 
