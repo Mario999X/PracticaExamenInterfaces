@@ -3,7 +3,7 @@
 Esta app esta pensada para repasar los aspectos básicos 
 de la teoría dada sin contar con los apartados de iconos y API.
 
-Es decir, vistas anidadas, css, animacion, lista, tabla, 
+Es decir, vistas anidadas, css, animación, lista, tabla, 
 internacionalización, gráficas.
 
 La lista esta introducida en código directamente 
