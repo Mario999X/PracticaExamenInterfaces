@@ -1,7 +1,7 @@
 # --- PRÁCTICA EXAMEN INTERFACES ---
 
 Esta app esta pensada para repasar los aspectos básicos 
-de la teoría dada sin contar el apartado de iconos y API.
+de la teoría dada sin contar con los apartados de iconos y API.
 
 Es decir, vistas anidadas, css, animacion, lista, tabla, 
 internacionalización, gráficas.
