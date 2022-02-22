@@ -24,7 +24,6 @@ public class AppGrafLineasController implements Initializable {
     }
 
     public void iniciarGrafica(){
-        grafLineas.setTitle("Natalidad Especies");
 
         XYChart.Series serieMamifero = new XYChart.Series();
         serieMamifero.setName("Mamifero");

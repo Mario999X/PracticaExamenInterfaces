@@ -7,18 +7,19 @@
    <children>
       <HBox fx:id="hBoxSaludo" alignment="CENTER" maxHeight="-Infinity" maxWidth="1.7976931348623157E308" prefHeight="100.0" prefWidth="200.0" style="-fx-background-color: Black;" StackPane.alignment="BOTTOM_CENTER">
          <children>
-            <Label text="¡Buenos dias!" />
+            <Label fx:id="lblSaludo" text="%lblSaludo" />
          </children>
       </HBox>
       <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
          <children>
-            <Button fx:id="btnLista" alignment="TOP_LEFT" mnemonicParsing="false" onAction="#cargarVistaLista" text="Lista" />
-            <Button fx:id="btnTabla" mnemonicParsing="false" onAction="#cargarVistaTabla" text="Tabla" />
-            <Button fx:id="btnGrafCircular" mnemonicParsing="false" onAction="#cargarVistaGrafCircular" text="GraficaCircular" />
-            <Button fx:id="btnGrafLineas" mnemonicParsing="false" onAction="#cargarVistaGrafLineas" text="GraficoLineas" />
+            <Button fx:id="btnLista" alignment="TOP_LEFT" mnemonicParsing="false" onAction="#cargarVistaLista" text="%btnLista" />
+            <Button fx:id="btnTabla" mnemonicParsing="false" onAction="#cargarVistaTabla" text="%btnTabla" />
+            <Button fx:id="btnGrafCircular" mnemonicParsing="false" onAction="#cargarVistaGrafCircular" text="%btnGrafCircular" />
+            <Button fx:id="btnGrafLineas" mnemonicParsing="false" onAction="#cargarVistaGrafLineas" text="%btnGrafLineas" />
          </children>
       </VBox>
-      <Button fx:id="btnSaludo" mnemonicParsing="false" onAction="#iniciaSaludo" text="Saludo" StackPane.alignment="TOP_RIGHT" />
+      <Button fx:id="btnSalir" alignment="CENTER" mnemonicParsing="false" onAction="#salirApp" text="%btnSalir" StackPane.alignment="TOP_LEFT" />
+      <Button fx:id="btnSaludo" mnemonicParsing="false" onAction="#iniciaSaludo" text="%btnSaludo" StackPane.alignment="TOP_RIGHT" />
       <fx:include fx:id="appLista" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" source="appLista.fxml" />
       <fx:include fx:id="appTabla" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" source="appTabla.fxml" />
       <fx:include fx:id="appGrafCircular" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" source="appGrafCircular.fxml" />

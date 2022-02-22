@@ -2,7 +2,7 @@
     -fx-text-fill: white;
 }
 
-#appPrincipal .label{
+#lblSaludo {
     -fx-text-fill: white;
     -fx-font-size: 20px;
 }

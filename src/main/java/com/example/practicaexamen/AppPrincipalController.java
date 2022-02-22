@@ -22,7 +22,6 @@ public class AppPrincipalController implements Initializable {
 
     @FXML
     private StackPane appLista, appTabla, appGrafCircular, appGrafLineas;
-
     @FXML
     private AppListaController appListaController;
     @FXML
@@ -45,7 +44,7 @@ public class AppPrincipalController implements Initializable {
         appGrafCircular.setVisible(false);
         appGrafLineas.setVisible(false);
 
-        cargarLista();
+        rellenarLista();
 
     }
 
@@ -86,7 +85,7 @@ public class AppPrincipalController implements Initializable {
         //appGrafLineasController.iniciarGrafica(datosLista);
     }
 
-    private void cargarLista() {
+    private void rellenarLista() {
 
         datosLista = FXCollections.observableArrayList(
                 new Animal("Lobo", 10, "Vertebrado"),
@@ -97,6 +96,11 @@ public class AppPrincipalController implements Initializable {
                 new Animal("Lombriz", 1, "Invertebrado"),
                 new Animal("Medusa", 1, "Invertebrado"));
 
+    }
+
+    @FXML
+    private void salirApp(){
+        System.exit(0);
     }
 
 }

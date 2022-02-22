@@ -17,7 +17,7 @@ public class AppTablaController {
     private TableView vistaTabla;
 
     @FXML
-    private TableColumn<Animal, String> columnName, columnClas;
+    private TableColumn<Animal, String> columnName, columnClas; // Se señalizan los tipos de datos a introducir en la columna.
 
     @FXML
     private void volverPrincipalT() {
@@ -28,7 +28,7 @@ public class AppTablaController {
         vistaTabla.setEditable(true);
         columnName.setCellValueFactory(new PropertyValueFactory<>("nombre"));
         columnClas.setCellValueFactory(new PropertyValueFactory<>("clasificacion"));
-        columnClas.setCellFactory(TextFieldTableCell.forTableColumn());
+        columnClas.setCellFactory(TextFieldTableCell.forTableColumn()); // Esto + lo de abajo permite modificar un campo de la tabla.
         columnClas.setOnEditCommit(data -> {
             if (data != null) {
                 data.getRowValue().setClasificacion(data.getNewValue());

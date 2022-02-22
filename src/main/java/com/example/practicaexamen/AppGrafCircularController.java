@@ -42,7 +42,6 @@ public class AppGrafCircularController {
                 new PieChart.Data("Invertebrados", contadorInvertebrados),
                 new PieChart.Data("Otros", contadorTotal));
         grafCircular.setData(datosGrafica);
-        grafCircular.setTitle("Clasificacion animal");
         grafCircular.setClockwise(false);
     }
 }

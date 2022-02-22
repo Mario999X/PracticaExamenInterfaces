@@ -12,17 +12,14 @@ public class AppDetalleController {
     @FXML
     private Label lblNombre, lblClasificacion;
 
-    public void cargarAnimal(Animal animal) {
-
+    public void cargarAnimalEnDetalle(Animal animal) {
         lblNombre.setText(animal.getNombre());
         lblClasificacion.setText(animal.getClasificacion());
-
     }
 
     @FXML
     private void volverADetalle() {
         appDetalle.setVisible(false);
     }
-
 
 }

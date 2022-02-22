@@ -2,13 +2,9 @@ package com.example.practicaexamen;
 
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
-import javafx.fxml.Initializable;
 import javafx.scene.control.ListView;
 import javafx.scene.control.SelectionMode;
 import javafx.scene.layout.StackPane;
-
-import java.net.URL;
-import java.util.ResourceBundle;
 
 public class AppListaController{
 
@@ -28,7 +24,7 @@ public class AppListaController{
         vistaLista.getSelectionModel().setSelectionMode(SelectionMode.MULTIPLE);
         vistaLista.getSelectionModel().selectedItemProperty().addListener((observable, oldValue, newValue) -> {
             if (newValue != null) {
-                appDetalleController.cargarAnimal((Animal)newValue);
+                appDetalleController.cargarAnimalEnDetalle((Animal)newValue);
                 cargarVistaDetalle();
             }
         });
